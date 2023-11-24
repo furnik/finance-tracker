@@ -1,0 +1,26 @@
+export const palette = {
+  light: {
+    background: "#FFFFFF",
+    primaryText: "-webkit-linear-gradient(0deg, #0007AE 0%, #FF007A 100%);",
+    secondaryText: "#8B8B8B",
+    tertiaryText: "#000000",
+    blue: "#0007AE",
+    pink: "#FF007A",
+    yellow: "yellow",
+    yellow_2: "#F9C001",
+    gold: "gold",
+    white: "#FFFFFF",
+  },
+  dark: {
+    background: "#000000",
+    primaryText: "-webkit-linear-gradient(0deg, #0007AE 0%, #FF007A 100%);",
+    secondaryText: "#8B8B8B",
+    tertiaryText: "#FFFFFF",
+    blue: "#0007AE",
+    pink: "#FF007A",
+    yellow: "yellow",
+    yellow_2: "#F9C001",
+    gold: "gold",
+    white: "#FFFFFF",
+  },
+};
