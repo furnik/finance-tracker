@@ -19,6 +19,7 @@ export const Button = styled.button<{ $active: boolean }>`
   border-radius: 100%;
   background: ${({ theme }) => theme.primaryText};
   border: none;
+  cursor: pointer;
 
   position: relative;
   z-index: 10;

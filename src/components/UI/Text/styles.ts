@@ -1,7 +1,7 @@
 import styled, { css, DefaultTheme } from "styled-components";
-import { TextProps } from "./index";
-import { Elements } from "../../../constants/text";
-import { device } from "../../../constants/device";
+import { TextProps } from ".";
+import { TextElements } from "@/constants/text";
+import { device } from "@/constants/device";
 
 function textColor({ variant, theme }: DefaultTheme) {
   switch (variant) {
@@ -22,9 +22,9 @@ function textColor({ variant, theme }: DefaultTheme) {
 
 const getWeight = ({ elements }: DefaultTheme) => {
   switch (elements) {
-    case Elements.H1:
+    case TextElements.H1:
       return 400;
-    case Elements.H2:
+    case TextElements.H2:
       return 400;
 
     default:
@@ -51,5 +51,10 @@ export const H2 = styled.h2<TextProps>`
 
 export const P = styled.p<TextProps>`
   font-size: 16px;
+  ${styles};
+`;
+
+export const Balance = styled.p<TextProps>`
+  font-size: 48px;
   ${styles};
 `;

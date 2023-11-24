@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import { device } from "../../../constants/device";
+import { device } from "@/constants/device";
 
 export const spin = keyframes`
 0% {

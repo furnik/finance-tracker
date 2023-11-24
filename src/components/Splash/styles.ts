@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { Text } from "../UI/Text";
-import { device } from "../../constants/device";
+import { Text } from "@/components/UI/Text";
+import { device } from "@/constants/device";
 
 export const Wrapper = styled.section`
   display: flex;

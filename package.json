@@ -1,7 +1,7 @@
 {
   "name": "finance-tracker",
   "private": true,
-  "homepage": "https://furnik.github.io/cms/",
+  "homepage": "https://furnik.github.io/finance-tracker/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -9,7 +9,7 @@
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "predeploy": "npm run build"
   },
   "dependencies": {
@@ -21,6 +21,7 @@
     "styled-components": "^6.1.1"
   },
   "devDependencies": {
+    "@types/node": "^20.10.0",
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
     "@types/styled-components": "^5.1.30",

@@ -1,6 +1,6 @@
-import { Elements, Variants } from "../../constants/text";
-import { Divider } from "../UI/Divider";
-import { Text } from "../UI/Text";
+import { TextElements, TextVariants } from "../../constants/text";
+import { Divider } from "@/components/UI/Divider";
+import { Text } from "@/components/UI/Text";
 import { Coin } from "./Coin";
 import { Wrapper, CreatedText } from "./styles";
 
@@ -9,10 +9,10 @@ export const Splash = () => {
     <Wrapper>
       <Coin />
       <Divider vertical={10} />
-      <Text variant={Variants.PRIMARY} element={Elements.H1}>
+      <Text variant={TextVariants.PRIMARY} element={TextElements.H1}>
         finance tracker
       </Text>
-      <CreatedText variant={Variants.SECONDARY} element={Elements.P}>
+      <CreatedText variant={TextVariants.SECONDARY} element={TextElements.P}>
         created by S&D
       </CreatedText>
     </Wrapper>

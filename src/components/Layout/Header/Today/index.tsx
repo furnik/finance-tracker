@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import dayjs from "dayjs";
-import { Elements, Variants } from "../../../../constants/text";
-import { Text } from "../../../UI/Text";
+import { TextElements, TextVariants } from "@/constants/text";
+import { Text } from "@/components/UI/Text";
 import { TodayWrapper } from "./styles";
 
 export const Today = () => {
@@ -18,7 +18,7 @@ export const Today = () => {
 
   return (
     <TodayWrapper>
-      <Text variant={Variants.TERTIARY} element={Elements.P}>
+      <Text variant={TextVariants.TERTIARY} element={TextElements.P}>
         today, {format}
       </Text>
     </TodayWrapper>

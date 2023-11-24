@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { AddButton } from "../../UI/Button/AddButton";
+import { AddButton } from "@/components/UI/Button/AddButton";
 import { FooterWrapper } from "./styles";
 
 export const Footer = () => {

@@ -2,12 +2,19 @@ import {
   createBrowserRouter,
   RouterProvider as Provider,
 } from "react-router-dom";
-import { SplashPage } from "../../pages/Splash";
+import { LayoutPage } from "@/pages/Layout";
+import { MainPage } from "@/pages/Main";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <SplashPage />,
+    element: <LayoutPage />,
+    children: [
+      {
+        path: "finance-tracker",
+        element: <MainPage />,
+      },
+    ],
   },
 ]);
 
