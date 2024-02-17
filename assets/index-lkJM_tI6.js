@@ -73,7 +73,7 @@ Error generating stack: `+i.message+`
   flex-direction: column;
   gap: 30px;
   height: 100%;
-`,b_="modulepreload",U_=function(e){return"/"+e},Kh={},z_=function(t,n,r){if(!n||n.length===0)return t();const o=document.getElementsByTagName("link");return Promise.all(n.map(i=>{if(i=U_(i),i in Kh)return;Kh[i]=!0;const l=i.endsWith(".css"),a=l?'[rel="stylesheet"]':"";if(!!r)for(let c=o.length-1;c>=0;c--){const d=o[c];if(d.href===i&&(!l||d.rel==="stylesheet"))return}else if(document.querySelector(`link[href="${i}"]${a}`))return;const u=document.createElement("link");if(u.rel=l?"stylesheet":b_,l||(u.as="script",u.crossOrigin=""),u.href=i,document.head.appendChild(u),l)return new Promise((c,d)=>{u.addEventListener("load",c),u.addEventListener("error",()=>d(new Error(`Unable to preload CSS for ${i}`)))})})).then(()=>t()).catch(i=>{const l=new Event("vite:preloadError",{cancelable:!0});if(l.payload=i,window.dispatchEvent(l),!l.defaultPrevented)throw i})},Cc=Ne.div`
+`,b_="modulepreload",U_=function(e){return"/finance-tracker/"+e},Kh={},z_=function(t,n,r){if(!n||n.length===0)return t();const o=document.getElementsByTagName("link");return Promise.all(n.map(i=>{if(i=U_(i),i in Kh)return;Kh[i]=!0;const l=i.endsWith(".css"),a=l?'[rel="stylesheet"]':"";if(!!r)for(let c=o.length-1;c>=0;c--){const d=o[c];if(d.href===i&&(!l||d.rel==="stylesheet"))return}else if(document.querySelector(`link[href="${i}"]${a}`))return;const u=document.createElement("link");if(u.rel=l?"stylesheet":b_,l||(u.as="script",u.crossOrigin=""),u.href=i,document.head.appendChild(u),l)return new Promise((c,d)=>{u.addEventListener("load",c),u.addEventListener("error",()=>d(new Error(`Unable to preload CSS for ${i}`)))})})).then(()=>t()).catch(i=>{const l=new Event("vite:preloadError",{cancelable:!0});if(l.payload=i,window.dispatchEvent(l),!l.defaultPrevented)throw i})},Cc=Ne.div`
   width: 4px;
   height: 35px;
   background: ${({theme:e})=>e.white};
@@ -109,7 +109,7 @@ Error generating stack: `+i.message+`
   width: 100%;
   position: absolute;
   bottom: 20px;
-`,B_=b.lazy(()=>z_(()=>import("./index-YybuG9ij.js"),__vite__mapDeps([]))),W_=()=>{const[e,t]=b.useState(!1),n=()=>t(r=>!r);return ee.jsxs(j_,{children:[e&&ee.jsx(b.Suspense,{children:ee.jsx(B_,{onClose:n})}),ee.jsx(V_,{callback:n})]})},H_=Ne.img`
+`,B_=b.lazy(()=>z_(()=>import("./index-C18NVceH.js"),__vite__mapDeps([]))),W_=()=>{const[e,t]=b.useState(!1),n=()=>t(r=>!r);return ee.jsxs(j_,{children:[e&&ee.jsx(b.Suspense,{children:ee.jsx(B_,{onClose:n})}),ee.jsx(V_,{callback:n})]})},H_=Ne.img`
   width: 40px;
   height: 40px;
   border-radius: 100%;
