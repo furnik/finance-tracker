@@ -1,6 +1,11 @@
-import{s as o,r as d,j as e,c as m,n as k,u as j}from"./index-eDXTMh7k.js";const y=o.input`
+import{s as o,r as c,j as e,c as g,n as f,u as m}from"./index-1Flz53rB.js";const k=o.label`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: ${({theme:n})=>n.secondaryText};
+`,y=o.input`
   width: 100%;
-  height: 36px;
+  height: 40px;
   background: none;
   border: 2px solid ${({theme:n})=>n.secondaryText};
   border-radius: 8px;
@@ -22,14 +27,14 @@ import{s as o,r as d,j as e,c as m,n as k,u as j}from"./index-eDXTMh7k.js";const
   &[type="number"] {
     -moz-appearance: textfield;
   }
-`,w=({onChange:n,...t})=>{const r=d.useRef(null),i=()=>{var a;n(Number(((a=r.current)==null?void 0:a.value)||0))};return e.jsx(y,{ref:r,...t,onBlur:i})},$=m`
+`,j=({onChange:n,label:t,...r})=>{const i=c.useRef(null),p=()=>{var a;n(Number(((a=i.current)==null?void 0:a.value)||0))};return e.jsxs(k,{children:[t,e.jsx(y,{ref:i,...r,onBlur:p})]})},w=g`
 0% {
   opacity: 0;
 }
 100% {
   transform: 1;
 }
-`,v=o.div`
+`,$=o.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -41,21 +46,21 @@ import{s as o,r as d,j as e,c as m,n as k,u as j}from"./index-eDXTMh7k.js";const
   background: rgba(0, 0, 0, 0.6);
   z-index: ${({index:n})=>n||11};
   transition: 0.5s;
-  animation: ${$} 0.3s ease-in;
-`,I=o.div`
+  animation: ${w} 0.3s ease-in;
+`,v=o.div`
   background: ${({theme:n})=>n.tertiaryText};
   padding: 20px;
   margin: 0 20px;
   width: 100%;
   max-width: 500px;
   border-radius: 16px;
-`,L=({index:n,onClose:t,children:r})=>{const i=d.useRef(null),a=c=>{i.current&&i.current.isEqualNode(c.target)&&t&&t()};return e.jsx(v,{index:n,ref:i,onClick:a,children:e.jsx(I,{children:r})})},T=o.form`
+`,L=({index:n,onClose:t,children:r})=>{const i=c.useRef(null),p=a=>{i.current&&i.current.isEqualNode(a.target)&&t&&t()};return e.jsx($,{index:n,ref:i,onClick:p,children:e.jsx(v,{children:r})})},T=o.form`
   display: flex;
   flex-direction: column;
   gap: 20px;
-`,C=o.div`
+`,I=o.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   gap: 20px;
   width: 100%;
   margin-top: 20px;
@@ -63,15 +68,15 @@ import{s as o,r as d,j as e,c as m,n as k,u as j}from"./index-eDXTMh7k.js";const
     width: 40%;
     max-width: 120px;
   }
-`,H=o.div`
+`,S=o.div`
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   width: 100%;
-`;var p=(n=>(n.GHOST="ghost",n.OUTLINE="outline",n.FILL="fill",n))(p||{});const l=k`
+`;var d=(n=>(n.GHOST="ghost",n.OUTLINE="outline",n.FILL="fill",n))(d||{});const l=f`
   font-size: 16px;
   cursor: pointer;
-`,S=o.button`
+`,C=o.button`
   border: none;
   background: none;
   width: max-content;
@@ -79,7 +84,7 @@ import{s as o,r as d,j as e,c as m,n as k,u as j}from"./index-eDXTMh7k.js";const
   padding: 0;
   color: ${({theme:n})=>n.pink};
   ${l};
-`,E=o.button`
+`,H=o.button`
   border: none;
   background: ${({theme:n})=>n.pink};
   height: 44px;
@@ -95,7 +100,7 @@ import{s as o,r as d,j as e,c as m,n as k,u as j}from"./index-eDXTMh7k.js";const
   color: ${({theme:n})=>n.pink};
   border-radius: 6px;
   ${l};
-`,x=({variant:n,callback:t,children:r})=>{switch(n){case p.FILL:return e.jsx(E,{onClick:t,children:r});case p.OUTLINE:return e.jsx(F,{onClick:t,children:r});default:return e.jsx(S,{onClick:t,children:r})}},B=o.button`
+`,B=({variant:n,callback:t,children:r})=>{switch(n){case d.FILL:return e.jsx(H,{onClick:t,children:r});case d.OUTLINE:return e.jsx(F,{onClick:t,children:r});default:return e.jsx(C,{onClick:t,children:r})}},E=o.button`
   border: 2px solid ${({theme:n})=>n.pink};
   background: ${({theme:n,active:t})=>t?n.pink:"transparent"};
   height: 30px;
@@ -104,4 +109,4 @@ import{s as o,r as d,j as e,c as m,n as k,u as j}from"./index-eDXTMh7k.js";const
   border-radius: 6px;
   cursor: pointer;
   transition: 0.3s;
-`,N=({value:n,onChange:t,...r})=>{const i=()=>{t(n)};return e.jsx(B,{...r,onClick:i,children:n})},h=["profit","spending"],b={value:0,type:h[0],date:new Date},W=({onClose:n})=>{const[t,r]=d.useState(b),{setDataHandler:i}=j(),a=s=>{s==null||s.preventDefault()},c=()=>{i(t),n()},u=s=>g=>{r(f=>({...f,[s]:g}))};return console.log(b.date),e.jsx(L,{index:10,children:e.jsxs(T,{onSubmit:a,children:[e.jsx(H,{children:h.map(s=>e.jsx(N,{value:s,onChange:u("type"),active:s===t.type},s))}),e.jsx(w,{placeholder:"0",type:"number",onChange:u("value")}),e.jsxs(C,{children:[e.jsx(x,{variant:p.FILL,callback:c,children:"enter"}),e.jsx(x,{variant:p.OUTLINE,callback:n,children:"cancel"})]})]})})};export{W as default};
+`,O=({value:n,onChange:t,...r})=>{const i=()=>{t(n)};return e.jsx(E,{...r,onClick:i,children:n})},x=["Profit","Spending"],W={value:0,type:x[0],date:new Date},N=({onClose:n})=>{const[t,r]=c.useState(W),{setDataHandler:i}=m(),p=s=>{s==null||s.preventDefault()},a=()=>{i(t),n()},u=s=>b=>{r(h=>({...h,[s]:b}))};return e.jsx(L,{index:10,onClose:n,children:e.jsxs(T,{onSubmit:p,children:[e.jsx(j,{label:"Amount",placeholder:"0",type:"number",onChange:u("value")}),e.jsx(S,{children:x.map(s=>e.jsx(O,{value:s,onChange:u("type"),active:s===t.type},s))}),e.jsx(I,{children:e.jsx(B,{variant:d.FILL,callback:a,children:"OK"})})]})})};export{N as default};
