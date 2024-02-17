@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Line = styled.div`
   width: 4px;
-  height: 40px;
+  height: 35px;
   background: ${({ theme }) => theme.white};
   position: absolute;
   border-radius: 2px;
@@ -14,10 +14,10 @@ export const Button = styled.button<{ $active: boolean }>`
   align-items: center;
   justify-content: center;
 
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   border-radius: 100%;
-  background: ${({ theme }) => theme.primaryText};
+  background: ${({ theme }) => theme.pink};
   border: none;
   cursor: pointer;
 

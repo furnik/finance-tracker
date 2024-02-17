@@ -33,6 +33,7 @@ const getWeight = ({ elements }: DefaultTheme) => {
 };
 
 const styles = css`
+  display: inline-flex;
   ${textColor};
   font-weight: ${getWeight};
 `;
@@ -55,6 +56,12 @@ export const P = styled.p<TextProps>`
 `;
 
 export const Balance = styled.p<TextProps>`
-  font-size: 48px;
+  font-size: 40px;
+  line-height: 1;
+  ${styles};
+`;
+
+export const Currency = styled.p<TextProps>`
+  font-size: 20px;
   ${styles};
 `;

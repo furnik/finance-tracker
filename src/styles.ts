@@ -9,5 +9,18 @@ export const GlobalStyles = createGlobalStyle`
   body {
     font-family: "Inria Sans", sans-serif !important;
     background: ${({ theme }) => theme.background};
+    height: 100%;
+  }
+  #root, html{
+    height: 100%;
+  }
+  input {
+    font-family: inherit;
+    &::placeholder {
+      font-family: inherit
+    }
+  }
+  button {
+    font-family: inherit;
   }
 `;

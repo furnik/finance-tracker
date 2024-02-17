@@ -3,6 +3,7 @@ export enum TextElements {
   H2 = "h2",
   P = "p",
   BALANCE = "balance",
+  CURRENCY = "currency",
 }
 
 export enum TextVariants {

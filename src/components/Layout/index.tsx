@@ -1,23 +1,25 @@
 import { Outlet } from "react-router-dom";
-import { LayoutWrapper } from "./styles";
+import { Wrapper } from "./styles";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
-import { SplashPage } from "@/pages/Splash";
+import { Splash } from "@/components/Splash";
+import { useRecoilValue } from "recoil";
+import { appState } from "@/state/app";
+import { authState } from "@/state/auth";
 
-interface LayoutProps {
-  loading: boolean;
-}
+export const Layout = () => {
+  const { loading } = useRecoilValue(appState);
+  const { isAuth } = useRecoilValue(authState);
 
-export const Layout: React.FC<LayoutProps> = ({ loading }) => {
   if (loading) {
-    return <SplashPage />;
+    return <Splash />;
   }
 
   return (
-    <LayoutWrapper>
-      <Header />
+    <Wrapper>
+      {isAuth && <Header />}
       <Outlet />
-      <Footer />
-    </LayoutWrapper>
+      {isAuth && <Footer />}
+    </Wrapper>
   );
 };

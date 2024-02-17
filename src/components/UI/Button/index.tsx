@@ -1,20 +1,24 @@
 import { PropsWithChildren } from "react";
 import { ButtonVariants } from "@/constants/button";
-import { GhostButton } from "./styles";
+import { GhostButton, FillButton, OutlineButton } from "./styles";
 
 interface ButtonProps {
   variant: ButtonVariants;
+  callback: () => void;
 }
 
 export const Button: React.FC<PropsWithChildren<ButtonProps>> = ({
   variant,
+  callback,
   children,
 }) => {
   switch (variant) {
-    case ButtonVariants.GHOST:
-      return <GhostButton>{children}</GhostButton>;
+    case ButtonVariants.FILL:
+      return <FillButton onClick={callback}>{children}</FillButton>;
+    case ButtonVariants.OUTLINE:
+      return <OutlineButton onClick={callback}>{children}</OutlineButton>;
 
     default:
-      return <div>ok</div>;
+      return <GhostButton onClick={callback}>{children}</GhostButton>;
   }
 };

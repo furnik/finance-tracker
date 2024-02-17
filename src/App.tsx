@@ -1,13 +1,16 @@
-import { ThemeProvider } from "styled-components";
-import { palette } from "@/constants/pallete";
-import { GlobalStyles } from "./styles";
-import { RouterProvider } from "@/providers/Router";
+import { RouterProvider } from "@/providers/routerProvider";
+import { ThemeProvider } from "@/providers/themeProvider";
+import { StateProvider } from "@/providers/stateProvider";
+import { AuthProvider } from "@/providers/authProvider";
 
 export const App = () => {
   return (
-    <ThemeProvider theme={palette.dark}>
-      <GlobalStyles />
-      <RouterProvider />
-    </ThemeProvider>
+    <AuthProvider>
+      <StateProvider>
+        <ThemeProvider>
+          <RouterProvider />
+        </ThemeProvider>
+      </StateProvider>
+    </AuthProvider>
   );
 };

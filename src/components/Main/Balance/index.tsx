@@ -1,29 +1,46 @@
 import { useMemo } from "react";
 import { TextElements, TextVariants } from "@/constants/text";
-import { ButtonVariants } from "@/constants/button";
-import { getBalance } from "@/helpers/balance";
+import { parseBalanceToString } from "@/helpers/balance";
 import { Text } from "@/components/UI/Text";
-import { TBalance } from "@/types/balance";
-import { Wrapper, Row } from "./styles";
-import { Button } from "@/components/UI/Button";
+import { Wrapper, Row, Column, BalanceRow } from "./styles";
+import { useRecoilValue } from "recoil";
+import { balanceState } from "@/state/balance";
 
-interface BalanceProps {
-  balance: TBalance;
-}
+export const Balance = () => {
+  const { balance } = useRecoilValue(balanceState);
+  const { money, coin, card, cash } = useMemo(
+    () => parseBalanceToString(balance),
+    [balance]
+  );
 
-export const Balance = ({ balance }: BalanceProps) => {
-  const value = useMemo(() => getBalance(balance), [balance]);
   return (
     <Wrapper>
-      <Row>
-        <Text variant={TextVariants.SECONDARY} element={TextElements.P}>
-          balance
+      <BalanceRow>
+        <Text variant={TextVariants.TERTIARY} element={TextElements.BALANCE}>
+          {money}
         </Text>
-        <Button variant={ButtonVariants.GHOST}>view</Button>
-      </Row>
-      <Text variant={TextVariants.TERTIARY} element={TextElements.BALANCE}>
-        {value}
-      </Text>
+        <Text variant={TextVariants.TERTIARY} element={TextElements.CURRENCY}>
+          .{coin}
+        </Text>
+      </BalanceRow>
+      <Column>
+        <Row>
+          <Text variant={TextVariants.SECONDARY} element={TextElements.P}>
+            Card balance:
+          </Text>
+          <Text variant={TextVariants.SECONDARY} element={TextElements.P}>
+            {card}
+          </Text>
+        </Row>
+        <Row>
+          <Text variant={TextVariants.SECONDARY} element={TextElements.P}>
+            Cash balance:
+          </Text>
+          <Text variant={TextVariants.SECONDARY} element={TextElements.P}>
+            {cash}
+          </Text>
+        </Row>
+      </Column>
     </Wrapper>
   );
 };

@@ -18,7 +18,7 @@ export const Today = () => {
 
   return (
     <TodayWrapper>
-      <Text variant={TextVariants.TERTIARY} element={TextElements.P}>
+      <Text variant={TextVariants.SECONDARY} element={TextElements.P}>
         today, {format}
       </Text>
     </TodayWrapper>

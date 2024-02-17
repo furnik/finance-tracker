@@ -1,5 +1,5 @@
 import { PropsWithChildren } from "react";
-import { H1, H2, P, Balance } from "./styles";
+import { H1, H2, P, Balance, Currency } from "./styles";
 import { TextVariants, TextElements } from "@/constants/text";
 
 export type TextProps = {
@@ -19,6 +19,8 @@ export const Text: React.FC<PropsWithChildren<TextProps>> = ({
       return <H2 {...props}>{children}</H2>;
     case TextElements.BALANCE:
       return <Balance {...props}>{children}</Balance>;
+    case TextElements.CURRENCY:
+      return <Currency {...props}>{children}</Currency>;
     default:
       return <P {...props}>{children}</P>;
   }
